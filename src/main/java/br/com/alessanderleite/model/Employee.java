@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 @Entity
 @Table(name = "employees")
@@ -21,6 +22,7 @@ public class Employee {
 	@Column(name = "last_name", nullable = false)
 	private String lastName;
 	
+	@Email
 	@Column(name = "email_address", nullable = false)
 	private String emailId;
 	
